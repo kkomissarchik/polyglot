@@ -1,0 +1,59 @@
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="polyglot-build-ant-ivy" default="test" basedir=".">
+
+    <property name="src.main" location="src/main/java"/>
+    <property name="src.test" location="src/test/java"/>
+	<property name="build" location="build"/>
+    <property name="build.main" location="${build}/main"/>
+    <property name="build.test" location="${build}/test"/>
+    <property name="build.reports" location="${build}/reports"/>
+
+    <target name="dependencies">
+        <echo message="Getting dependencies..." />
+        <ivy:retrieve />
+        <ivy:cachepath pathid="runtime.path" conf="runtime"/>
+        <ivy:cachepath pathid="test.path" conf="test"/>
+    </target>
+
+    <target name="buildMain" depends="dependencies" description="Compile main">
+        <mkdir dir="${build.main}"/>
+        <javac destdir="${build.main}" debug="true" includeantruntime="false" classpathref="runtime.path">
+            <src path="${src.main}"/>
+        </javac>
+    </target>
+
+    <target name="buildTest" depends="buildMain" description="Compile test">
+        <mkdir dir="${build.test}"/>
+        <javac destdir="${build.test}" debug="true" includeantruntime="false" classpathref="test.path">
+            <classpath>
+                <pathelement path="${build.main}"/>
+            </classpath>
+            <src path="${src.test}"/>
+        </javac>
+    </target>
+    
+    <target name="build" depends="buildMain,buildTest" description="Compile main and test"/>
+
+    <target name="test" depends="buildTest" description="Run tests">
+    	<mkdir dir="${build.reports}"/>
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath>
+                <pathelement location="${build.main}"/>
+                <pathelement location="${build.test}"/>
+                <pathelement path="${test.path}" />
+            </classpath>
+            <formatter type="plain" />
+            <formatter type="xml" />
+            <batchtest fork="yes" todir="${build.reports}">
+                <fileset dir="${src.test}">
+                    <include name="**/*Test*.java" />
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="clean" description="Clean build artifacts">
+    	<delete dir="${build}"/>
+    	<delete dir="lib"/>
+    </target>
+
+</project>

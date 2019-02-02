@@ -1,7 +1,7 @@
 #!/bin/sh
 
 rm -rf src
-rm -rf .gradle
 rm -rf build
+rm -rf lib
 
 cp -r ../../hello/java/src .
