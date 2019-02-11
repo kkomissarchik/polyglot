@@ -1,4 +1,4 @@
-# Hello Example - Node.js
+# Hello Example - Java
 
 This is an implementation of the [Hello Example](../README.md) using Java.
 
