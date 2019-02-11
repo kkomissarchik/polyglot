@@ -18,5 +18,5 @@ Run the tests like so:
 
 ## Technologies
 
-* Java - the programming language
+* Java - the programming language and the runtime environment
 * JUnit - the test framework

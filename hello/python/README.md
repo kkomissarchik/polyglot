@@ -18,5 +18,5 @@ Run the tests like so:
 
 ## Technologies
 
-* Python - the programming language
+* Python - the programming language and the runtime environment
 * unittest - the test framework
