@@ -1,0 +1,11 @@
+{
+    "name": "polyglot-hello",
+    "version": "1.0.0",
+    "main": "greeter.js",
+    "scripts": {
+        "test": "mocha './**/*-test.js'"
+    },
+    "devDependencies": {
+        "mocha": "5.2.0"
+    }
+}
