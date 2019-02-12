@@ -1,11 +1,11 @@
 # Hello Example
 
-The implementations of this example demonstrate a simple function in different languages and technical stacks.
+A simple function with a command line interface and unit tests.
 
 ## Requirements
 
 * Provide a function that takes a name and returns a string "Hello, [name]!"
-* Provide a way to exercise this function from the command line
+* Provide a way to invoke this function from the command line
 * Provide unit tests
 
 ## Implementations
