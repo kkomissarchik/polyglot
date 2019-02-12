@@ -13,7 +13,8 @@ Why polyglot? A polyglot is someone who can speak or use several different langu
 A simple function with a command line interface and unit tests.
 
 * Requirements
-    * Provide a function that takes a name and returns a string "Hello, [name]!"
+    * Provide a function that takes an optional name parameter and returns either "Hello!" or "Hello, [name]!",
+      dependent on whether a name is provided
     * Provide a way to invoke this function from the command line
     * Provide unit tests
 * Implementations
@@ -21,6 +22,7 @@ A simple function with a command line interface and unit tests.
     * [Java](hello/java/README.md)
     * [Node.js](hello/node.js/README.md)
     * [Python](hello/python/README.md)
+    * [Ruby](hello/ruby/README.md)
 
 ## Build Example
 
