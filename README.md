@@ -1,7 +1,10 @@
 # Project Polyglot
 
 Project Polyglot is a learning resource for comparing and contrasting implementations of the same requirements
-with different programming languages and technical stacks. 
+using different programming languages and technical stacks.
+
+This project is similar to other programming chrestomathy efforts, such [Rosetta Code](http://www.rosettacode.org),
+but with emphasis on runnable projects rather than code snippets.
 
 Why polyglot? A polyglot is someone who can speak or use several different languages.
 
