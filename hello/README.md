@@ -12,6 +12,7 @@ A simple function with a command line interface and unit tests.
 ## Implementations
 
 * [Bash](bash/README.md)
+* [Groovy](groovy/README.md)
 * [Java](java/README.md)
 * [Node.js](node.js/README.md)
 * [Python](python/README.md)

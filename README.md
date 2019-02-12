@@ -19,6 +19,7 @@ A simple function with a command line interface and unit tests.
     * Provide unit tests
 * Implementations
     * [Bash](hello/bash/README.md)
+    * [Groovy](hello/groovy/README.md)
     * [Java](hello/java/README.md)
     * [Node.js](hello/node.js/README.md)
     * [Python](hello/python/README.md)
