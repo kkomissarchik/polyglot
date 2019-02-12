@@ -7,6 +7,12 @@ This is an implementation of the [Hello Example](../README.md) using Java.
 Invoke the hello function like so:
 
 ```
+./hello.sh
+```
+
+or
+
+```
 ./hello.sh [name]
 ```
 
