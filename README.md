@@ -17,6 +17,7 @@ A simple function with a command line interface and unit tests.
     * Provide a way to invoke this function from the command line
     * Provide unit tests
 * Implementations
+    * [Bash](hello/bash/README.md)
     * [Java](hello/java/README.md)
     * [Node.js](hello/node.js/README.md)
     * [Python](hello/python/README.md)
