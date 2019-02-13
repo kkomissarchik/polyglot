@@ -1,0 +1,18 @@
+tasks.withType(Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+        showExceptions true
+        showCauses true
+        showStackTraces true
+
+        info.events = events
+        info.exceptionFormat = exceptionFormat
+
+        afterSuite { desc, result ->
+            if (!desc.parent && (result.resultType as String) == "SUCCESS") {
+                println("\n${result.testCount} test completed, none failed")
+            }
+        }
+    }
+}

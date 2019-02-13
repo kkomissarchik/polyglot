@@ -14,6 +14,7 @@ A simple function with a command line interface and unit tests.
 * [Bash](bash/README.md)
 * [Groovy](groovy/README.md)
 * [Java](java/README.md)
+* [Kotlin](kotlin/README.md)
 * [Node.js](node.js/README.md)
 * [Python](python/README.md)
 * [Ruby](ruby/README.md)
