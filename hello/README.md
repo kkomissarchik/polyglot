@@ -18,3 +18,4 @@ A simple function with a command line interface and unit tests.
 * [Node.js](node.js/README.md)
 * [Python](python/README.md)
 * [Ruby](ruby/README.md)
+* [Scala](scala/README.md)

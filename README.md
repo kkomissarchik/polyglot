@@ -25,6 +25,7 @@ A simple function with a command line interface and unit tests.
     * [Node.js](hello/node.js/README.md)
     * [Python](hello/python/README.md)
     * [Ruby](hello/ruby/README.md)
+    * [Scala](hello/scala/README.md)
 
 ## Build Example
 
