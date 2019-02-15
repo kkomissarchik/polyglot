@@ -1,30 +1,32 @@
 # Hello Example - Kotlin
 
-This is an implementation of the [Hello Example](../README.md) using Kotlin.
+These are several different implementations of the [Hello Example](../README.md) using Kotlin.
 
-## Usage
-
-Invoke the hello function like so:
+## Using if
 
 ```
-./hello.sh
+fun hello( name: String? = null ): String {
+    return if( name == null ) "Hello!" else "Hello, " + name + "!"
+}
 ```
 
-or
+[Source Code](if/README.md)
+
+## Using let
 
 ```
-./hello.sh [name]
+fun hello( name: String? = null ) = name?.let { "Hello, $it!" } ?: "Hello!"
 ```
 
-Run the tests like so:
+[Source Code](let/README.md)
+
+## Using when
 
 ```
-./test.sh
+fun hello( name: String? = null ) = when( name ) {
+    null -> "Hello!"
+    else -> "Hello, $name!"
+}
 ```
 
-## Technologies
-
-* Kotlin - the programming language and the runtime framework
-* Java - the runtime environment
-* JUnit - the test framework
-* Gradle - the build system
+[Source Code](when/README.md)
