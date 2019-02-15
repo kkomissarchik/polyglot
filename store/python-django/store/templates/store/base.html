@@ -1,0 +1,18 @@
+{% load static %}
+
+<html>
+    <header>
+        <title>Store</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'store/styles/base.css' %}" />
+    </header>
+    <body>
+        <div id="header">
+		    <div id="header_title">{% block title %}{% endblock %}</div>
+		    <div id="header_menu">
+		    	<a href="{% url 'products' %}">Products</a><a href="{% url 'customers' %}">Customers</a><a href="{% url 'orders' %}">Orders</a>
+		    </div>
+		</div>
+        {% block content %}
+        {% endblock %}
+    </body>
+<html>

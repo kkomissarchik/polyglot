@@ -1,0 +1,114 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Order {{ order.id }}{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'store/styles/order.css' %}" />
+    
+    <div class="envelope order">
+        {{ form.name_of_field.errors }}
+        <form id="form" method="post">
+            {% csrf_token %}
+            <table class="customer">
+                <tr>
+                    <th>Customer</th>
+                </tr>
+                <td>
+                    {{ form.customer }}
+                    {{ form.customer.errors }}
+                    <div>
+                        <div class="customer-phone" id="customer-phone"></div>
+                        <div class="customer-address" id="customer-address"></div>
+                    </div>
+                </td>
+            </table>
+            {{ items.management_form }}
+            <table id="order_items">
+                <tr id="order-item">
+                    <th class="item-name">Item</th>
+                    <th class="item-quantity">Quantity</th>
+                    <th class="item-unit-price">Unit Price</th>
+                    <th class="item-total">Total</th>
+                    <th class="item-delete-cell"/>
+                </tr>
+                {% for item_form in items.forms %}
+                    <tr class="item" id="id_items-{{ forloop.counter0 }}-row">
+                        <td class="item-name">
+                            {{ item_form.product }}
+                            {% for hidden in item_form.hidden_fields %}
+                                {{ hidden }}
+                            {% endfor %}
+                        </td>
+                        <td class="item-quantity">{{ item_form.quantity }}</td>
+                        <td class="item-unit-price" id="id_items-{{ forloop.counter0 }}-price"></td>
+                        <td class="item-total" id="id_items-{{ forloop.counter0 }}-total"></td>
+                        <td class="item-delete-cell">
+                            <input type="hidden" name="items-{{ forloop.counter0 }}-DELETE" id="id_items-{{ forloop.counter0 }}-DELETE"/>
+                            <a id="id_items-{{ forloop.counter0 }}-delete-button" class="item-delete-button" title="Delete" href="javascript:{}">
+                                <img src="{% static 'store/images/delete-icon.svg' %}" width="12"/>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <table id="tally">
+                <tr>
+                    <th id="tally_name">Subtotal</th>
+                    <td id="tally_value"><span id="subtotal"/></th>
+                </tr>
+                <tr>
+                    <th id="tally_name">Tax Rate</th>
+                    <td id="tally_value" class="input-field-cell">{% include "store/form-field.html" with field=form.tax_rate %}</td>
+                </tr>
+                <tr>
+                    <th id="tally_name">Tax</th>
+                    <td id="tally_value"><span id="tax"/></td>
+                </tr>
+                <tr>
+                    <th id="tally_name">Shipping</th>
+                    <td id="tally_value" class="input-field-cell">{% include "store/form-field.html" with field=form.shipping %}</td>
+                </tr>
+                <tr>
+                    <th id="tally_name">Discount</th>
+                    <td id="tally_value" class="input-field-cell">{% include "store/form-field.html" with field=form.discount %}</td>
+                </tr>
+                <tr>
+                    <th id="tally_name">Total</th>
+                    <td id="tally_total_value"><span id="total"/><</td>
+                </tr>
+            </table>
+            <div class="order-actions">
+                {% if object %}
+                    <a class="button" href="{% url 'order' object.id %}">Cancel</a>
+                    &nbsp;&nbsp;
+                    <a class="button" href="javascript:{}" onclick="document.getElementById('form').submit()">Save</a>
+                    &nbsp;&nbsp;
+                    <a class="button" href="{% url 'order-delete' object.id %}">Delete</a>
+                {% else %}
+                    <a class="button" href="{% url 'orders' %}">Cancel</a>
+                    &nbsp;&nbsp;
+                    <a class="button" href="javascript:{}" onclick="document.getElementById('form').submit()">Save</a>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'store/scripts/order_form.js' %}"></script>
+    
+    <script>
+
+        {% for item in object.items.all %}
+            prices[ {{ item.product.id }} ] = {{ item.product.price }};
+        {% endfor %}
+        
+        {% if object.customer %}
+            customers[ {{ object.customer.id }} ] = {{ object.customer.json|safe }};
+        {% endif %}
+
+        setup();
+
+    </script>
+     
+{% endblock %}

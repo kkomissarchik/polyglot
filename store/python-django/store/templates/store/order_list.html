@@ -1,0 +1,27 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Orders{% endblock %}
+
+{% block content %}
+
+    <table class="envelope listing">
+        <tr>
+            <td>
+                {% if order_list %}
+                    {% for order in order_list %}
+                        <div>
+                            <a href="{% url 'order' order.id %}">{{ order }}</a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No orders are available.</p>
+                {% endif %}
+            </td>
+            <td class="listing-actions-column">
+                <a href="{% url 'order-add' %}" class="button">Add Order</a>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

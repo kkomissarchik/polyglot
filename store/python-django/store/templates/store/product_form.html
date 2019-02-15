@@ -1,0 +1,36 @@
+{% extends "store/base.html" %}
+
+{% block title %}
+	{% if object %}
+		Edit {{ object.name }}
+	{% else %}
+		Add Product
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+
+	<form id="form" method="post" class="envelope">
+		{% csrf_token %}
+		<table class="basic-table-detail">
+			{{ form.as_table }}
+			<tr class="basic-table-detail-actions-row">
+				<th></th>
+				<td>
+                    {% if object %}
+                        <a class="button" href="{% url 'product' object.id %}">Cancel</a>
+                        &nbsp;&nbsp;
+                        <a class="button" href="javascript:{}" onclick="document.getElementById('form').submit()">Save</a>
+                        &nbsp;&nbsp;
+                        <a class="button" href="{% url 'product-delete' object.id %}">Delete</a>
+                    {% else %}
+                        <a class="button" href="{% url 'products' %}">Cancel</a>
+                        &nbsp;&nbsp;
+                        <a class="button" href="javascript:{}" onclick="document.getElementById('form').submit()">Save</a>
+                    {% endif %}
+				</td>
+			</tr>
+		</table>
+	</form>
+
+{% endblock %}

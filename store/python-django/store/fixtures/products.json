@@ -1,0 +1,98 @@
+[
+  {
+    "model": "store.Product",
+    "pk": 1,
+    "fields": {
+      "name": "iPhone XS - 64GB, Black",
+      "price": "999"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 2,
+    "fields": {
+      "name": "iPhone XS - 256GB, Black",
+      "price": "1149"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 3,
+    "fields": {
+      "name": "iPhone XS - 512GB, Black",
+      "price": "1349"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 4,
+    "fields": {
+      "name": "Apple Watch",
+      "price": "399"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 5,
+    "fields": {
+      "name": "MacBook Pro - 13\", 2.3GHz Dual-Core, 8GB RAM, 128GB SSD",
+      "price": "1299"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 6,
+    "fields": {
+      "name": "MacBook Pro - 13\", 2.3GHz Dual-Core, 8GB RAM, 256GB SSD",
+      "price": "1499"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 7,
+    "fields": {
+      "name": "MacBook Pro - 13\", Touch Bar, 2.3GHz Quad-Core, 8GB RAM, 256GB SSD",
+      "price": "1799"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 8,
+    "fields": {
+      "name": "MacBook Pro - 13\", Touch Bar, 2.3GHz Quad-Core, 8GB RAM, 512GB SSD",
+      "price": "1999"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 9,
+    "fields": {
+      "name": "Square Reader for Magstripe",
+      "price": "9.95"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 10,
+    "fields": {
+      "name": "Square Stand for iPad",
+      "price": "199.95"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 11,
+    "fields": {
+      "name": "iPad - 32GB",
+      "price": "329"
+    }
+  },
+  {
+    "model": "store.Product",
+    "pk": 12,
+    "fields": {
+      "name": "iPad - 128GB",
+      "price": "429"
+    }
+  }
+]

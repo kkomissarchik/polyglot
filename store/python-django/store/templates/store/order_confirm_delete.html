@@ -1,0 +1,18 @@
+{% extends "store/base.html" %}
+
+{% block title %}
+	Confirm Delete
+{% endblock %}
+
+{% block content %}
+
+    <form id="form" method="post" class="envelope">
+        {% csrf_token %}
+        <p>Are you sure you want to delete order {{ object.id }}?</p>
+        <br/>
+        <a class="button" href="javascript:{}" onclick="document.getElementById('form').submit()">Delete</a>
+        &nbsp;&nbsp;
+        <a class="button" href="{% url 'order-edit' object.id %}">Cancel</a></td>
+    </form>
+
+{% endblock %}

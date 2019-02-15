@@ -1,0 +1,19 @@
+[
+  {
+    "model": "store.Customer",
+    "pk": 1,
+    "fields": {
+      "name": "John Smith",
+      "phone": "(206) 555-4444",
+      "address": "23423 NE 5th Avenue\nSeattle, WA 98122"
+    }
+  },
+  {
+    "model": "store.Customer",
+    "pk": 2,
+    "fields": {
+      "name": "Jane Doe",
+      "phone": "(425) 555-7777"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+    <table class="envelope listing">
+        <tr>
+            <td>
+                {% if product_list %}
+                    {% for product in product_list %}
+                        <div class="search-result-entry">
+                            <a href="{% url 'product' product.id %}">{{ product.name }}</a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No products are available.</p>
+                {% endif %}
+            </td>
+            <td class="listing-actions-column">
+                <a href="{% url 'product-add' %}" class="button">Add Product</a>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

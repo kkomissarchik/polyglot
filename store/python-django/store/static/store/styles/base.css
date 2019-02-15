@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+	font-family: Karla, Helvetica, sans-serif;
+}
+
+form td {
+	padding: 5px;
+}
+
+form th {
+	padding: 5px;
+	text-align: right;
+}
+
+form input[type=text] {
+    width: 400px;
+    padding: 4px;
+    border: 1px solid LightGray;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+form input[type=number] {
+    padding: 4px;
+    border: 1px solid LightGray;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+form textarea {
+    width: 400px;
+    padding: 4px;
+    border: 1px solid LightGray;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+form select {
+    font-size: 14px;
+    min-width: 200px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a.button {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    min-width: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: initial;
+}
+
+a.button:hover {
+    background-color: #ddd;
+}
+
+.envelope {
+    margin: auto;
+	width: 1000px;
+}
+
+.basic-table-detail tr {
+    line-height: 30px;
+}
+
+.basic-table-detail th, td {
+    border: 0px solid black;
+    padding: 5px;
+}
+
+.basic-table-detail th {
+    text-align: right;
+    vertical-align: top;
+    width: 100px;
+}
+
+.basic-table-detail-actions-row td {
+    padding-top: 20px;
+}
+
+.listing tr {
+    line-height: 30px;
+}
+
+.listing td {
+    border: 0px solid black;
+    padding: 5px;
+}
+
+.listing-actions-column {
+    vertical-align: top;
+    text-align: right;
+}
+
+#header {
+    width: 100%;
+	border-bottom: 1px solid black;
+	margin-bottom: 40px;
+    line-height: 40px;
+	background-color: #f2f2f2;
+	overflow: hidden;
+}
+
+#header_title {
+    float: left;
+	font-size: 26px;
+	padding-left: 10px
+}
+
+#header_menu {
+	float: right;
+ 	vertical-align: middle;
+	font-size: 16px;
+}
+
+#header_menu a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+#header_menu a:hover {
+    background-color: #ddd;
+}

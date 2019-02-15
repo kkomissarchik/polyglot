@@ -1,0 +1,176 @@
+.order table {
+    border-collapse: collapse;
+}
+
+.order td,
+.order th {
+    padding: 5px 10px 5px 10px;
+    line-height: 30px;
+}
+
+.order th {
+    font-weight: normal;
+}
+
+.order input {
+    width: 100%;
+}
+
+.order select {
+    width: 100%;
+}
+
+.customer {
+    margin-bottom: 40px;
+}
+
+.customer td, 
+.customer th {
+    border: 1px solid black;
+}
+
+.customer th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.customer td {
+    line-height: initial;
+    padding: 10px;
+}
+
+.customer-phone,
+.customer-address {
+    padding-top: 10px;
+}
+
+.customer-address {
+    white-space: pre-line;
+}
+
+
+
+
+
+#order_items {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+#order_items td, th {
+	border: 1px solid black;
+}
+
+#order_items th {
+	border: 1px solid black;
+    background-color: #f2f2f2;
+}
+
+.item-name {
+    text-align: left;
+    width: auto;
+}
+
+.item-quantity {
+    text-align: right;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+.item-quantity input {
+    text-align: right;
+}
+
+.item-unit-price {
+    text-align: right;
+    box-sizing: border-box;
+    width: 150px;
+}
+
+.item-total {
+    text-align: right;
+    box-sizing: border-box;
+    width: 170px;
+}
+
+.item-delete-cell {
+    border-width: 0px 0px 0px 1px !important;
+    background-color: initial !important;
+    width: 12px;
+}
+
+.item-delete-button {
+    visibility: hidden;
+}
+
+.item:hover .item-delete-button {
+    visibility: visible;
+}
+
+#item-add {
+    text-align: left;
+}
+
+#tally {
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin: 40px 32px 0px auto;
+}
+
+#tally_name {
+    border-width: 1px;
+    border-style: solid;
+    border-color: white black white white;
+    text-align: right;
+}
+
+#tally_value {
+    border: 1px solid black;
+	text-align: right;
+    width: 150px
+}
+
+#tally_value input {
+    text-align: right;
+    width: 100%;
+}
+
+#tally_total_value {
+    border: 1px solid black;
+	text-align: right;
+	box-sizing: border-box;
+    width: 170px;
+    background-color: #f2f2f2;
+}
+
+#form input {
+    font-size: medium;
+}
+
+.order-actions {
+    width: 100%;
+    text-align: right;
+    padding: 40px 32px 100px 0px;
+    box-sizing: border-box;
+}
+
+.invalid-field ul {
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    font-size: 11px;
+    color: red;
+    line-height: initial;
+}
+
+.invalid-field input[type=text],
+.invalid-field input[type=number] {
+    border: 1px solid red !important;
+}
+
+.input-field-cell {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}

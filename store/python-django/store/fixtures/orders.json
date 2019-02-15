@@ -1,0 +1,64 @@
+[
+  {
+    "model": "store.Order",
+    "pk": 1,
+    "fields": {
+      "customer": "1",
+      "tax_rate": "8.6",
+      "shipping": "19.97",
+      "discount": "50"
+    }
+  },
+  {
+    "model": "store.OrderItem",
+    "pk": 1,
+    "fields": {
+      "order": "1",
+      "product": "12",
+      "quantity": "2"
+    }
+  },
+  {
+    "model": "store.OrderItem",
+    "pk": 2,
+    "fields": {
+      "order": "1",
+      "product": "10",
+      "quantity": "2"
+    }
+  },
+  {
+    "model": "store.OrderItem",
+    "pk": 3,
+    "fields": {
+      "order": "1",
+      "product": "9",
+      "quantity": "1"
+    }
+  },
+  {
+    "model": "store.Order",
+    "pk": 2,
+    "fields": {
+      "customer": "2"
+    }
+  },
+  {
+    "model": "store.OrderItem",
+    "pk": 4,
+    "fields": {
+      "order": "2",
+      "product": "8",
+      "quantity": "1"
+    }
+  },
+  {
+    "model": "store.OrderItem",
+    "pk": 5,
+    "fields": {
+      "order": "2",
+      "product": "4",
+      "quantity": "1"
+    }
+  }
+]

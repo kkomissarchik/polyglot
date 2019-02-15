@@ -1,0 +1,80 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Order {{ order.id }}{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'store/styles/order.css' %}" />
+
+    <div id="order" class="envelope order">
+    	<table class="customer">
+    	    <tr>
+    	        <th>Customer</th>
+    	    </tr>
+    	    <td>
+                <div class="customer-name">{{ order.customer.name }}</div>
+                {% if order.customer.phone %}
+                    <div class="customer-phone">{{ order.customer.phone }}</div>
+                {% endif %}
+                {% if order.customer.address %}
+                    <div class="customer-address">{{ order.customer.address|linebreaksbr }}</div>
+                {% endif %}
+    	    </td>
+    	</table>
+	    <table id="order_items">
+	        <tr id="order-item">
+	            <th class="item-name">Item</th>
+	            <th class="item-quantity">Quantity</th>
+	            <th class="item-unit-price">Unit Price</th>
+	            <th class="item-total">Total</th>
+	            <th class="item-delete-cell"/>
+	        </tr>
+		    {% for item in order.items.all %}
+		    	<tr>
+		    		<td class="item-name">{{ item.product.name }}</td>
+		    		<td class="item-quantity">{{ item.quantity }}</td>
+		    		<td class="item-unit-price">${{ item.product.price }}</td>
+		    		<td class="item-total">${{ item.total }}</td>
+		    		<td class="item-delete-cell"/>
+		    	</tr>
+		    {% empty %}
+		    	<tr>
+		    	    <td id="item-add" colspan="4">Empty order</td>
+		    	</tr>
+		    {% endfor %}
+		</table>
+		<table id="tally">
+	    	<tr>
+	    		<th id="tally_name">Subtotal</th>
+	    		<td id="tally_value">${{ order.sub_total }}</td>
+	    	</tr>
+            {% if order.tax_rate > 0 %}
+    	    	<tr>
+    	    		<th id="tally_name">Tax</th>
+                    <td id="tally_value">{{ order.tax_rate }}% - ${{ order.tax }}</td>
+    	    	</tr>
+            {% endif %}
+            {% if order.shipping > 0 %}
+    	    	<tr>
+    	    		<th id="tally_name">Shipping</th>
+                    <td id="tally_value">${{ order.shipping }}</td>
+    	    	</tr>
+            {% endif %}
+            {% if order.discount > 0 %}
+    	    	<tr>
+    	    		<th id="tally_name">Discount</th>
+    	    		<td id="tally_value">${{ order.discount }}</td>
+    	    	</tr>
+            {% endif %}
+	    	<tr>
+	    		<th id="tally_name">Total</th>
+	    		<td id="tally_total_value">${{ order.total }}</td>
+	    	</tr>
+	    </table>
+            <div class="order-actions">
+                <a class="button" href="{% url 'order-edit' order.id %}">Edit</a>
+            </div>
+	</div>
+
+{% endblock %}

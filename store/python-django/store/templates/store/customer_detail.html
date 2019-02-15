@@ -1,0 +1,33 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}{{ customer.name }}{% endblock %}
+
+{% block content %}
+
+    <div class="envelope">
+    	<table class="basic-table-detail">
+        	<tr>
+        		<th>Name:</th>
+        		<td>{{ customer.name }}</td>
+        	</tr>
+        	{% if object.phone %}
+            	<tr>
+            		<th>Phone:</th>
+            		<td>{{ customer.phone }}</td>
+            	</tr>
+            {% endif %}
+            {% if object.address %}
+            	<tr>
+            		<th>Address:</th>
+            		<td>{{ customer.address|default:""|linebreaksbr }}</td>
+            	</tr>
+            {% endif %}
+            <tr class="basic-table-detail-actions-row">
+                <th></th>
+                <td><a class="button" href="{% url 'customer-edit' customer.id %}">Edit</a></td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

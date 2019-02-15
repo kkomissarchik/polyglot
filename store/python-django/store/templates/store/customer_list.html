@@ -1,0 +1,27 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Customers{% endblock %}
+
+{% block content %}
+
+    <table class="envelope listing">
+        <tr>
+            <td>
+                {% if customer_list %}
+                    {% for customer in customer_list %}
+                        <div>
+                            <a href="{% url 'customer' customer.id %}">{{ customer.name }}</a>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No customers are available.</p>
+                {% endif %}
+            </td>
+            <td class="listing-actions-column">
+                <a href="{% url 'customer-add' %}" class="button">Add Customer</a>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

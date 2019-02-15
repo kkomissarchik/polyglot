@@ -1,0 +1,25 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+
+    <div class="envelope">
+    	<table class="basic-table-detail">
+        	<tr>
+        		<th>Name:</th>
+        		<td>{{ product.name }}</td>
+        	</tr>
+        	<tr>
+        		<th>Price:</th>
+        		<td>${{ product.price }}</td>
+        	</tr>
+        	<tr class="basic-table-detail-actions-row">
+        		<th></th>
+        		<td><a class="button" href="{% url 'product-edit' product.id %}">Edit</a></td>
+        	</tr>
+        </table>
+    </div>
+
+{% endblock %}
