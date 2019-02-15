@@ -5,5 +5,5 @@ fun hello( name: String? = null ): String {
 }
 
 fun main( args: Array<String> ) {
-    println( hello( if( args.size == 1 ) args[ 0 ] else null ) )
+    println( hello( args.firstOrNull() ) )
 }
