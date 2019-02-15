@@ -1,4 +1,4 @@
-# Hello Example - Kotlin - let
+# Hello Example - Kotlin (using let)
 
 This is an implementation of the [Hello Example](../../README.md) using Kotlin and its *let* function.
 

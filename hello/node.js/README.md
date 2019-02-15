@@ -2,6 +2,14 @@
 
 This is an implementation of the [Hello Example](../README.md) using JavaScript and Node.js platform.
 
+```
+function hello( name ) {
+    return name == null ? "Hello!" : "Hello, " + name + "!";
+}
+
+console.log( hello( process.argv.length == 3 ? process.argv[ 2 ] : null ) );
+```
+
 ## Usage
 
 Invoke the hello function like so:

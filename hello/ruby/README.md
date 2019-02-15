@@ -2,6 +2,14 @@
 
 This is an implementation of the [Hello Example](../README.md) using Ruby.
 
+```
+def hello( name = nil )
+   return name ? "Hello, " + name + "!" : "Hello!"
+end
+
+puts hello( ARGV.length == 1 ? ARGV[ 0 ] : nil )
+```
+
 ## Usage
 
 Invoke the hello function like so:

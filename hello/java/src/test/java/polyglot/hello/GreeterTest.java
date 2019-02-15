@@ -1,4 +1,4 @@
-package polyglot.hello.java;
+package polyglot.hello;
 
 import static org.junit.Assert.assertEquals;
 

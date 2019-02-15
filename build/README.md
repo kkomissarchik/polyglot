@@ -7,7 +7,7 @@ A build system that compiles the source code and runs the unit tests.
 * Provide a facility to compile the source code
 * Provide a facility to run the unit tests
 
-## Implementations
+## Solutions
 
 * [Ant with Ivy](ant-ivy/README.md)
 * [Gradle](gradle/README.md)

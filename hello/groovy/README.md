@@ -2,6 +2,14 @@
 
 This is an implementation of the [Hello Example](../README.md) using Groovy.
 
+```
+def static hello( name = null ) {
+    return name == null ? "Hello!" : "Hello, " + name + "!"
+}
+
+println hello( args.length == 1 ? args[ 0 ] : null )
+```
+
 ## Usage
 
 Invoke the hello function like so:

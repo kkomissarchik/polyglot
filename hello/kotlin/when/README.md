@@ -1,4 +1,4 @@
-# Hello Example - Kotlin - when
+# Hello Example - Kotlin (using when)
 
 This is an implementation of the [Hello Example](../../README.md) using Kotlin and its *when* function.
 

@@ -1,4 +1,4 @@
-package polyglot.hello.java;
+package polyglot.hello;
 
 import java.util.Objects;
 

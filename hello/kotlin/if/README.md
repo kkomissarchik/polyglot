@@ -1,4 +1,4 @@
-# Hello Example - Kotlin - if
+# Hello Example - Kotlin (using if)
 
 This is an implementation of the [Hello Example](../../README.md) using Kotlin and its *if* expression.
 
